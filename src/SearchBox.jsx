@@ -4,7 +4,7 @@ import { useState, useTransition } from 'react';
 import "./SearchBox.css";
 import InfoBox from './InfoBox';
 export default function SearchBox({updateInfo}){
-    let [error,setError] = useState(false);
+    let [error,setError] = useState("");
     let [city,setCity] = useState("");
 
     let URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -42,10 +42,11 @@ export default function SearchBox({updateInfo}){
         evet.preventDefault();
       console.log(city);
       setCity("");
+      setError("");
       let newInfo = await getWeatherInfo();
       updateInfo(newInfo);
     } catch(err){
-        setError(true);
+       setError("No such place exists in my api");
     }
     }
 
@@ -55,7 +56,7 @@ export default function SearchBox({updateInfo}){
             <TextField id="city" label="city name" variant="outlined" required value={city} onChange={handleChange} /><br></br><br></br>
             <Button variant="contained" type='submit'>Get Weather</Button>
             </form>
-            {error && <p>No such place exists in my api</p>}
+            <p>{error}</p>
         </div>
     )
 }
