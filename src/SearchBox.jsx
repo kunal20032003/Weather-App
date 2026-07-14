@@ -53,10 +53,10 @@ export default function SearchBox({updateInfo}){
     return(
         <div className='search'>
             <form onSubmit={handleSubmit}>
-            <TextField id="city" label="city name" variant="outlined" required value={city} onChange={handleChange} /><br></br><br></br>
+            <TextField id="city" label="Location" variant="outlined" required value={city} onChange={handleChange} /><br></br><br></br>
             <Button variant="contained" type='submit'>Get Weather</Button>
             </form>
-            <p>{error}</p>
+             <p style={{ color: 'red', fontSize: '1.5rem' }}>{error}</p>
         </div>
     )
 }
