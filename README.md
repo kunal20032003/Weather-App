@@ -1,16 +1,31 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Weather App by K.P
 
-Currently, two official plugins are available:
+A simple weather application built with React that lets users search for any city and get real-time weather information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
+🔗 [weather-app-uk5g.onrender.com](https://weather-app-uk5g.onrender.com/)
 
-## React Compiler
+## Features
+- Search weather by city name
+- Displays temperature, humidity, min/max temperature, and "feels like" temperature
+- Shows weather condition (e.g. clear sky, rainy, cloudy)
+- Error handling for invalid or non-existent city names
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- React (Vite)
+- Material UI (MUI)
+- Axios (for API calls)
+- OpenWeatherMap API
+- Deployed on Render (Static Site)
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Prerequisites
+- Node.js installed
+
+### Installation
+```bash
+git clone https://github.com/kunal20032003/Weather-App.git
+cd Weather-App
+npm install
